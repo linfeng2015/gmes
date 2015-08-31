@@ -14,7 +14,7 @@ import org.hibernate.validator.constraints.NotBlank;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.google.common.collect.ImmutableList;
-
+//测试github
 @Entity
 @Table(name = "gm_user")
 public class User extends IdEntity {

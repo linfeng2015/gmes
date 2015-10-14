@@ -19,6 +19,7 @@ import com.yfsy.gems.service.account.ShiroDbRealm.ShiroUser;
  * 
  * @author calvin
  */
+
 @Controller
 @RequestMapping(value = "/profile")
 public class ProfileController {

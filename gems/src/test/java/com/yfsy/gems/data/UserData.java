@@ -10,7 +10,6 @@ public class UserData {
 		user.setLoginName(RandomData.randomName("user"));
 		user.setName(RandomData.randomName("User"));
 		user.setPlainPassword(RandomData.randomName("password"));
-
 		return user;
 	}
 }

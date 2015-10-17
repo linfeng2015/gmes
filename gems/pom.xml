@@ -38,7 +38,7 @@
 		<jdbc.driver.artifactId>h2</jdbc.driver.artifactId>
 		<jdbc.driver.version>${h2.version}</jdbc.driver.version>
 		 -->
-		<!--  -->	
+		
 			<jdbc.driver.groupId>mysql</jdbc.driver.groupId>
 			<jdbc.driver.artifactId>mysql-connector-java</jdbc.driver.artifactId>
 			<jdbc.driver.version>5.1.21</jdbc.driver.version>
@@ -374,6 +374,14 @@
 			<scope>test</scope>
 		</dependency>
 		<!-- TEST end -->
+		<!-- lyf add -->
+		<!-- poi -->
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi</artifactId>
+			<version>3.13</version>
+		</dependency>
+		<!-- end lyf  -->
 	</dependencies>
 	
 	<dependencyManagement>

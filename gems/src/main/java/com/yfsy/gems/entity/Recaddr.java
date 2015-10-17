@@ -8,7 +8,8 @@ import javax.persistence.Table;
 public class Recaddr extends IdEntity {
 	private String name ;
 	private String addr ;
-	private String company ;
+	private String company ;	
+	private int flag ;
 	
 
 	public Recaddr() {
@@ -40,6 +41,14 @@ public class Recaddr extends IdEntity {
 
 	public void setCompany(String company) {
 		this.company = company;
+	}
+
+	public int getFlag() {
+		return flag;
+	}
+
+	public void setFlag(int flag) {
+		this.flag = flag;
 	}
 
 }

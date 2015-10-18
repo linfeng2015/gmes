@@ -10,10 +10,10 @@
 </head>
 
 <body>
-	<form id="inputForm" action="${ctx}/recaddr/${action}" method="post" class="form-horizontal">
+	<form id="inputForm" action="${ctx}/recaddr/uploadFile" method="post" class="form-horizontal" enctype="multipart/form-data" >
 		<div>
 			文件名称：<input type="file" name="addrFile" value="选择" /><input type="button" name="btnUpload" value="导入"/>
-			<input type="button" name="save" value="保存"/>
+			<input type="submit" name="save" value="保存"/>
 		</div>
 		<br/>
 		<br/>

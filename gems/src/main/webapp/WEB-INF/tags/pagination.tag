@@ -1,9 +1,7 @@
 <%@tag pageEncoding="UTF-8"%>
 <%@ attribute name="page" type="org.springframework.data.domain.Page" required="true"%>
 <%@ attribute name="paginationSize" type="java.lang.Integer" required="true"%>
-
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-
 <%
 int current =  page.getNumber() + 1;
 int begin = Math.max(1, current - paginationSize/2);

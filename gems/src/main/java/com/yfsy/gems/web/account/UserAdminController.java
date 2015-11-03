@@ -1,5 +1,4 @@
 package com.yfsy.gems.web.account;
-
 import java.util.List;
 
 import javax.validation.Valid;
@@ -16,11 +15,13 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import com.yfsy.gems.entity.User;
 import com.yfsy.gems.service.account.AccountService;
 
+
 /**
  * 管理员管理用户的Controller.
  * 
  * @author calvin
  */
+
 @Controller
 @RequestMapping(value = "/admin/user")
 public class UserAdminController {

@@ -1,6 +1,8 @@
 package com.yfsy.gems.entity;
 
 import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -8,9 +10,9 @@ import javax.persistence.Table;
 public class Recaddr extends IdEntity {
 	private String name ;
 	private String addr ;
-	private String company ;	
+	private String company ;
 	private int flag ;
-	
+	private AddrSheet addrSheet ;
 
 	public Recaddr() {
 	}
@@ -49,6 +51,17 @@ public class Recaddr extends IdEntity {
 
 	public void setFlag(int flag) {
 		this.flag = flag;
+	}
+	
+	//JPA基于SHEET_ID列的多对一关系定义
+	@ManyToOne
+	@JoinColumn(name = "sheet_id")
+	public AddrSheet getAddrSheet() {
+		return addrSheet;
+	}
+	
+	public void setAddrSheet(AddrSheet addrSheet) {
+		this.addrSheet = addrSheet;
 	}
 
 }

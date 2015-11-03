@@ -54,10 +54,8 @@ public class TaskController {
 	@RequestMapping(value = "")
 	public String list(@RequestParam(value = "sortType", defaultValue = "auto") String sortType,
 			@RequestParam(value = "page", defaultValue = "1") int pageNumber, Model model, ServletRequest request) {
-
 		Map<String, Object> searchParams = Servlets.getParametersStartingWith(request, "search_");
 		Long userId = getCurrentUserId();
-
 		Page<Task> tasks = taskService.getUserTask(userId, searchParams, pageNumber, PAGE_SIZE, sortType);
 		model.addAttribute("tasks", tasks);
 		model.addAttribute("sortType", sortType);
@@ -78,7 +76,6 @@ public class TaskController {
 	public String create(@Valid Task newTask, RedirectAttributes redirectAttributes) {
 		User user = new User(getCurrentUserId());
 		newTask.setUser(user);
-
 		taskService.saveTask(newTask);
 		redirectAttributes.addFlashAttribute("message", "创建任务成功");
 		return "redirect:/task/";
